@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2022-03-17T17:17:18Z" name="Default suite" finished-at="2022-03-17T17:17:25Z" duration-ms="7039">
+    <groups>
+    </groups>
+    <test started-at="2022-03-17T17:17:18Z" name="Default test" finished-at="2022-03-17T17:17:25Z" duration-ms="7039">
+      <class name="com.thomasjacob.learningSelenium.automationClass">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.thomasjacob.learningSelenium.automationClass@63eef88a]" started-at="2022-03-17T17:17:18Z" name="setUp" finished-at="2022-03-17T17:17:21Z" duration-ms="2806" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="registerAccount()[pri:0, instance:com.thomasjacob.learningSelenium.automationClass@63eef88a]" started-at="2022-03-17T17:17:21Z" name="registerAccount" finished-at="2022-03-17T17:17:25Z" duration-ms="4216" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- registerAccount -->
+      </class> <!-- com.thomasjacob.learningSelenium.automationClass -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
