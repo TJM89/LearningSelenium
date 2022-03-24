@@ -30,21 +30,23 @@ public class BuyingDress {
 
 	@Test
 	public void buyingADress() {
-
+		//LOGIN TO THE PROFILE
 		WebElement email = wdriver.findElement(By.id("email"));
 		email.sendKeys("tj.extremez@gpomail.com");
 		WebElement password = wdriver.findElement(By.id("passwd"));
 		password.sendKeys("Password");
 
 		wdriver.findElement(By.id("SubmitLogin")).click();
+		//ASSERTION OF THE USER
 		WebElement nameConfirmation = wdriver.findElement(By.cssSelector("div [class = 'account'][title='View my customer account']"));
 		String userName = nameConfirmation.getText();
 		Assert.assertEquals(userName, "Thomas Jacob", "Username verified");
-
+		//CLICKING ON WOMEN
 		action = new Actions(wdriver);
 		WebElement clickWomenTab = wdriver.findElement(By.xpath("//a[contains(text(),'Women')]"));
 		action.click(clickWomenTab).perform();
-
+		
+		//SELECTING THE PRODUCT BY QUICK VIEW AND INCREASING QTY AND SIZE
 		WebElement quickview = wdriver.findElement(By.cssSelector("div [class = 'product-image-container']"));
 		quickview.click();
 
@@ -58,7 +60,8 @@ public class BuyingDress {
 		size.sendKeys("L");
 
 		wdriver.findElement(By.id("add_to_cart")).submit();
-
+		
+		//ASSERTING THE TOTAL PRICE
 		WebElement getPriceConfirmed = wdriver.findElement(By.id("total_price"));
 		String actualPrice = getPriceConfirmed.getText();
 		Assert.assertEquals(actualPrice, "$35.02", "Total price has been confirmed");
@@ -78,6 +81,8 @@ public class BuyingDress {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+		
+		//INPUTING A MESSAGE IN THE TEXT BOX
 		WebElement message = wdriver.findElement(By.cssSelector("textarea[name='message']"));
 		message.sendKeys("Please call the phone number provided at time of delivery");
 		try {
@@ -95,6 +100,8 @@ public class BuyingDress {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+		
+		//AGREEING TO TERMS AND CONDITIONS
 		WebElement checkBox = wdriver.findElement(By.id("cgv"));
 		checkBox.click();
 
@@ -113,6 +120,8 @@ public class BuyingDress {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+		
+		//CLICKING BANK WIRE TRANSFER AND ASSERTING THE SAME
 		WebElement paymentMode = wdriver.findElement(By.cssSelector("div [class = 'bankwire']"));
 		paymentMode.click();
 		WebElement getTheContent = wdriver.findElement(By.cssSelector("div [class = 'page-subheading']"));
@@ -122,6 +131,7 @@ public class BuyingDress {
 		WebElement confirmOrder = wdriver
 				.findElement(By.cssSelector("button[type='submit'][class='button btn btn-default button-medium']"));
 		confirmOrder.click();
+		//ASSERTING THE FINAL MESSAGE
 		WebElement getTextContent = wdriver.findElement(By.cssSelector("div [class = 'cheque-indent']"));
 		String actualText = getTextContent.getText();
 		Assert.assertEquals(actualText, "Your order on My Store is complete.", "Order placement complete");
