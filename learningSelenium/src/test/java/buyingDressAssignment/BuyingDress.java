@@ -41,7 +41,7 @@ public class BuyingDress {
 		WebElement nameConfirmation = wdriver.findElement(By.cssSelector("div [class = 'account'][title='View my customer account']"));
 		String userName = nameConfirmation.getText();
 		Assert.assertEquals(userName, "Thomas Jacob", "Username verified");
-		//CLICKING ON WOMEN
+		//CLICKING ON WOMEN TAB
 		action = new Actions(wdriver);
 		WebElement clickWomenTab = wdriver.findElement(By.xpath("//a[contains(text(),'Women')]"));
 		action.click(clickWomenTab).perform();
