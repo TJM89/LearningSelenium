@@ -1,6 +1,5 @@
 package buyingDressAssignment;
 
-import static org.testng.Assert.assertEquals;
 import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -38,8 +37,9 @@ public class BuyingDress {
 		password.sendKeys("Password");
 
 		wdriver.findElement(By.id("SubmitLogin")).click();
-		Assert.assertEquals("Thomas Jacob", "Thomas Jacob");
-		System.out.println("Assertion complete for Name");
+		WebElement nameConfirmation = wdriver.findElement(By.cssSelector("div [class = 'account'][title='View my customer account']"));
+		String userName = nameConfirmation.getText();
+		Assert.assertEquals(userName, "Thomas Jacob", "Username verified");
 
 		action = new Actions(wdriver);
 		WebElement clickWomenTab = wdriver.findElement(By.xpath("//a[contains(text(),'Women')]"));
@@ -57,24 +57,12 @@ public class BuyingDress {
 		WebElement size = wdriver.findElement(By.id("group_1"));
 		size.sendKeys("L");
 
-		// WebElement addToCart = wdriver.findElement(By.id("add_to_cart"));
 		wdriver.findElement(By.id("add_to_cart")).submit();
-		// action.click(addToCart).perform();
 
-		// wdriver.switchTo().defaultContent();
+		WebElement getPriceConfirmed = wdriver.findElement(By.id("total_price"));
+		String actualPrice = getPriceConfirmed.getText();
+		Assert.assertEquals(actualPrice, "$35.02", "Total price has been confirmed");
 
-		Assert.assertEquals("Faded Short Sleeve T-shirts", "Faded Short Sleeve T-shirts");
-		Assert.assertEquals("Quantity 2", "Quantity 2");
-		System.out.println("Item name and Quantity is confirmed");
-
-		Assert.assertEquals("Product successfully added to your shopping cart",
-				"Product successfully added to your shopping cart");
-		System.out.println("Adding product successful");
-
-		// wdriver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-
-		Assert.assertEquals("$35.02", "$35.02");
-		System.out.println("Total price has been confirmed");
 		try {
 			Thread.sleep(2000);
 		} catch (InterruptedException e) {
@@ -127,21 +115,23 @@ public class BuyingDress {
 		}
 		WebElement paymentMode = wdriver.findElement(By.cssSelector("div [class = 'bankwire']"));
 		paymentMode.click();
-
-		Assert.assertEquals("BANK-WIRE PAYMENT.", "BANK-WIRE PAYMENT.");
-		System.out.println("Payment method is Bank Wire Transfer");
+		WebElement getTheContent = wdriver.findElement(By.cssSelector("div [class = 'page-subheading']"));
+		String actualTextMessage = getTheContent.getText();
+		Assert.assertEquals(actualTextMessage, "BANK-WIRE PAYMENT.", "Bank Payment confirmation");
 
 		WebElement confirmOrder = wdriver
 				.findElement(By.cssSelector("button[type='submit'][class='button btn btn-default button-medium']"));
 		confirmOrder.click();
+		WebElement getTextContent = wdriver.findElement(By.cssSelector("div [class = 'cheque-indent']"));
+		String actualText = getTextContent.getText();
+		Assert.assertEquals(actualText, "Your order on My Store is complete.", "Order placement complete");
+
 		try {
 			Thread.sleep(2000);
 		} catch (InterruptedException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		Assert.assertEquals("Your order on My Store is complete.", "Your order on My Store is complete.");
-		System.out.println("Order placement complete");
 
 	}
 
