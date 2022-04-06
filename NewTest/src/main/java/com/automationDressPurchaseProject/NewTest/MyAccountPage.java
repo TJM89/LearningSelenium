@@ -10,6 +10,7 @@ public class MyAccountPage extends TestBase {
 
 	public MyAccountPage() {
 		PageFactory.initElements(wd, this);
+		waitForDocumentCompleteState(5);
 	}
 
 	@FindBy(xpath = "//a[contains(text(),'Women')]")

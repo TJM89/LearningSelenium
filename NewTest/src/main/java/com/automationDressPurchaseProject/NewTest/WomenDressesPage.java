@@ -11,6 +11,7 @@ public class WomenDressesPage extends TestBase {
 	public WomenDressesPage() {
 
 		PageFactory.initElements(wd, this);
+		waitForDocumentCompleteState(10);
 
 	}
 

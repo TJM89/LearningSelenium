@@ -11,6 +11,7 @@ public class LoginPage extends TestBase {
 	public LoginPage() {
 
 		PageFactory.initElements(wd, this);
+		waitForDocumentCompleteState(5);
 
 	}
 

@@ -11,7 +11,7 @@ public class HomePage1 extends TestBase {
 	public HomePage1() {
 
 		PageFactory.initElements(wd, this);
-
+		waitForDocumentCompleteState(5);
 	}
 
 	@FindBy(css = "div.header_user_info")

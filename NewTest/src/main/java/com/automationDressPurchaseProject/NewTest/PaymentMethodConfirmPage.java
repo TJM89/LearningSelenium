@@ -11,6 +11,7 @@ public class PaymentMethodConfirmPage extends TestBase {
 	public PaymentMethodConfirmPage() {
 
 		PageFactory.initElements(wd, this);
+		waitForDocumentCompleteState(3);
 
 	}
 

@@ -11,6 +11,7 @@ public class OrderCreationPage extends TestBase {
 	public OrderCreationPage() {
 
 		PageFactory.initElements(wd, this);
+		waitForDocumentCompleteState(3);
 
 	}
 

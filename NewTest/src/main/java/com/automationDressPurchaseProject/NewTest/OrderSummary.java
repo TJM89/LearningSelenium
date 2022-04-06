@@ -11,6 +11,7 @@ public class OrderSummary extends TestBase {
 	public OrderSummary() {
 
 		PageFactory.initElements(wd, this);
+		waitForDocumentCompleteState(3);
 
 	}
 

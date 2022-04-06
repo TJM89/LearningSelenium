@@ -11,7 +11,7 @@ public class AddressConfirmationPage extends TestBase {
 	public AddressConfirmationPage() {
 
 		PageFactory.initElements(wd, this);
-
+		waitForDocumentCompleteState(2);
 	}
 
 	@FindBy(css = "button[type='submit'][class='button btn btn-default button-medium']")
