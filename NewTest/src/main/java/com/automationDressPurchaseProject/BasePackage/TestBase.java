@@ -37,7 +37,7 @@ public class TestBase {
 		try {
 			prop =new Properties();
 			FileInputStream fs = new FileInputStream(
-					"C:\\Users\\Thomas\\eclipse-workspace\\NewTest\\src\\main\\java\\com\\automationDressPurchaseProject\\config\\configuration.properties");
+					"src//main//java//com//automationDressPurchaseProject//config//configuration.properties");
 
 			prop.load(fs);
 
@@ -107,7 +107,7 @@ public class TestBase {
 			String documentIsReady = jse.executeScript("return document.readyState").toString();
 			while (true) {
 				if (documentIsReady.equalsIgnoreCase("complete")) {
-					logger.info("Page has loaded completely......");
+					logger.info("Page has loaded completely.....");
 					return true;
 				} else {
 					return false;
