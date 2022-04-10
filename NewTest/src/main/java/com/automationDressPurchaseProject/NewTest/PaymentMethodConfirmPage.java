@@ -5,6 +5,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 import com.automationDressPurchaseProject.BasePackage.TestBase;
+import com.automationDressPurchaseProject.Utils.Utils;
 
 public class PaymentMethodConfirmPage extends TestBase {
 
@@ -19,7 +20,8 @@ public class PaymentMethodConfirmPage extends TestBase {
 	WebElement payByBankWire;
 
 	public FinalOrderConfirmPage payByBankWire() {
-		payByBankWire.click();
+		//payByBankWire.click();
+		Utils.javascriptClick(payByBankWire);
 
 		return new FinalOrderConfirmPage();
 	}

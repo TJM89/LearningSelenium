@@ -5,6 +5,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 import com.automationDressPurchaseProject.BasePackage.TestBase;
+import com.automationDressPurchaseProject.Utils.Utils;
 
 public class MyAccountPage extends TestBase {
 
@@ -17,7 +18,10 @@ public class MyAccountPage extends TestBase {
 	WebElement clickOnWomenLink;
 
 	public WomenDressesPage clickWomenTab() {
-		clickOnWomenLink.click();
+		//clickOnWomenLink.click();		
+		
+		Utils.clickOnElement(clickOnWomenLink);
+		
 		return new WomenDressesPage();
 
 	}

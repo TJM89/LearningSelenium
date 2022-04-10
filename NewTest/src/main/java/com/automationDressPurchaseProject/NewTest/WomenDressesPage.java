@@ -5,6 +5,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 import com.automationDressPurchaseProject.BasePackage.TestBase;
+import com.automationDressPurchaseProject.Utils.Utils;
 
 public class WomenDressesPage extends TestBase {
 
@@ -21,7 +22,8 @@ public class WomenDressesPage extends TestBase {
 	public OrderCreationPage quickViewClick() {
 
 		clickOnProduct.click();
-		wd.switchTo().frame(0);
+		//wd.switchTo().frame(0);
+		Utils.wd.switchTo().frame(0);
 
 		return new OrderCreationPage();
 	}

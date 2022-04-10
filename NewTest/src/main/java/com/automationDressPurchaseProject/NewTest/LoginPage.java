@@ -5,6 +5,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 import com.automationDressPurchaseProject.BasePackage.TestBase;
+import com.automationDressPurchaseProject.Utils.Utils;
 
 public class LoginPage extends TestBase {
 
@@ -34,6 +35,7 @@ public class LoginPage extends TestBase {
 
 	public MyAccountPage clickSignInBtn() {
 		signInBtn.click();
+		
 		return new MyAccountPage();
 
 	}

@@ -5,6 +5,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 import com.automationDressPurchaseProject.BasePackage.TestBase;
+import com.automationDressPurchaseProject.Utils.Utils;
 
 public class ShippingPage extends TestBase {
 
@@ -22,7 +23,8 @@ public class ShippingPage extends TestBase {
 
 	public PaymentMethodConfirmPage paymentMethodSelection() {
 		checkboxSelection.click();
-		paymentMethodSelection.click();
+		//paymentMethodSelection.click();
+		Utils.clickOnElement(paymentMethodSelection);
 		return new PaymentMethodConfirmPage();
 
 	}
