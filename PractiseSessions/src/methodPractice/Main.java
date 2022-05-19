@@ -49,15 +49,22 @@ public class Main {
 			if (pin == at.pin) {
 				System.out.println("Enter amount for deposit : ");
 				atmBalance = sc.nextInt();
-				System.out.println("Deposited amount of " + atmBalance + " dollars");
-				System.out.println("Total balance is " + (atmBalance + at.minremainingBalance) + "dollars");
 			}
-			else{
-				System.out.println("Invalid pin number");
-			}
-
-		}
+				
+				
+				if(atmBalance<=100) {
+					System.out.println("Incorrect information");
+					}
+			
+					else {
+						System.out.println("Deposited amount of " + atmBalance + " dollars");
+						System.out.println("Total balance is " + (atmBalance + at.minremainingBalance) + " dollars");
+					}
+							}
+				
+			
+			
+		
 		break;
-		}
-	}
-}
+	
+}}}

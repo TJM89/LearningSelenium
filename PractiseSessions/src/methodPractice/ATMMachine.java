@@ -19,7 +19,7 @@ public class ATMMachine {
 	}
 
 	public void setMinimumcashDeposit(int minimumcashDeposit) {
-		this.minimumcashDeposit = minimumcashDeposit;
+		this.minimumcashDeposit = 100;
 	}
 
 	public int getMinremainingBalance() {
