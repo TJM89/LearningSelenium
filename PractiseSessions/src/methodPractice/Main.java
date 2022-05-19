@@ -37,7 +37,7 @@ public class Main {
 			}
 
 			else {
-				System.out.println("Invalid account number");
+				System.out.println("Incorrect information");
 			}
 		}
 		break;
