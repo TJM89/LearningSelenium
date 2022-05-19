@@ -1,10 +1,12 @@
 package studentExample;
 
-public class Student {
+public class Student<string> {
 
 	private String name = "Thomas";
 	private int rollno = 16;
 	private double marksPercentage;
+	
+	
 
 	public String getName() {
 		return name;	
@@ -28,7 +30,20 @@ public class Student {
 
 	public void setMarksPercentage(double marksPercentage) {
 		this.marksPercentage = marksPercentage;
+		
 	}
 		
+	public boolean getInfo() {
+		
+		System.out.println("Name of student is " + this.name);
+		System.out.println("Roll no is " + this.rollno);
+		System.out.println("Percentage marks is " + marksPercentage);
+			
+		return true;
+		
+		
+	}
+	
+	
 	
 }

@@ -6,11 +6,11 @@ public class StudentMainClass {
 
 		Student sd = new Student();
 
-		double marksPercentage = 80;
+		double marksPercent = 80;
+			
+		System.out.println(sd.getInfo());
 		
-		System.out.println("Student name is " + sd.getName());
-		System.out.println("Student rollno is "+ sd.getRollno());
-		System.out.println("Marks % is " + marksPercentage);
+		 
 		
 	}
 }
