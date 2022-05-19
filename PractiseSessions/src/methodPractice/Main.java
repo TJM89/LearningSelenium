@@ -52,6 +52,9 @@ public class Main {
 				System.out.println("Deposited amount of " + atmBalance + " dollars");
 				System.out.println("Total balance is " + (atmBalance + at.minremainingBalance) + "dollars");
 			}
+			else{
+				System.out.println("Invalid pin number");
+			}
 
 		}
 		break;
