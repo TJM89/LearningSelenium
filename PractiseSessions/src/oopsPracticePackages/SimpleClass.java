@@ -8,12 +8,18 @@ public class SimpleClass extends AbstractClass {
 		
 	}
 
-	
-	
-	
 	@Override
-	public void connection() {
-		System.out.println("Testing connection");
+	void connection() {
+		// TODO Auto-generated method stub
+		
 	}
 
+	@Override
+	void data() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	
+	
 }

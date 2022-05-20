@@ -9,7 +9,7 @@ public class InheritanceMain {
 
 		ICICI.RBIRegulation1();
 		ICICI.RBIRegulation2();
-		ICICI.RBIRegulation3();
+		ICICI.RBIRegulation3();                                        
 		ICICI.ICICISpeicific();
 		
 		Axis.AxisBank();
