@@ -10,7 +10,7 @@ public class SimpleClass extends AbstractClass {
 	}
 
 	@Override
-	void connection() {
+	public void connection() {
 		System.out.println("This is a different connection");
 				
 	}
