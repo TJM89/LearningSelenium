@@ -1,24 +1,20 @@
 package oopsPracticePackages;
 
-public class SimpleClass extends AbstractClass {
+public class SimpleClass {
 
 	public static void main(String[] args) {
 
 		System.out.println("First");
 		
-
+		
+	NormalClass nm = new NormalClass();
+	
+	nm.connection();
+		
+		
+		
+		
+	}
+		
 	}
 
-	@Override
-	public void connection() {
-		System.out.println("This is a different connection");
-				
-	}
-
-	@Override
-	void data() {
-		// TODO Auto-generated method stub
-
-	}
-
-}

@@ -3,21 +3,20 @@ package oopsPracticePackages;
 public abstract class AbstractClass implements InterfaceClass{
 	
 	abstract void connection();
-	
-	
-	//concrete abstraction method?????
 	abstract void data();
 	
 	
 	//non concrete abstraction method
-	void someRandomInfo() {
+	public String someRandomInfo(String info) {
 		System.out.println("Random data");
+		return info;
 	
 	}
 	
 	@Override
 	public void interfaceMethodSample() {
-		// TODO Auto-generated method stub
+
+		System.out.println("Print sample");
 		
 	}
 	
