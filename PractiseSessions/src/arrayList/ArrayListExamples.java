@@ -1,6 +1,7 @@
 package arrayList;
 
 import java.util.ArrayList;
+import java.util.ListIterator;
 
 public class ArrayListExamples {
 
@@ -34,6 +35,15 @@ public class ArrayListExamples {
 
 		System.out.println(stringList.contains("Abraam"));
 
+		ListIterator<String> iterator = stringList.listIterator();
+		
+		
+		
+		
+		
 	}
+	
+	
+	
 
 }
