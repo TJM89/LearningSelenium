@@ -42,6 +42,9 @@ public class FastestWebsite {
 	element.click();
 	WebElement element2 = wd.findElement(By.xpath("//a[text()='relevant page']"));
 	element2.click();	
+	
+	wd.navigate().refresh();
+	wd.navigate().back();
 			
 	}
 	@AfterMethod
