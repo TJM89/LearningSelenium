@@ -14,6 +14,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Action;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
@@ -23,13 +25,16 @@ public class FastestWebsite {
 	
 	WebDriver wd;
 	Action act;
+	WebDriverWait wait;
 
 	@BeforeMethod
 	public void setUp() {
 
 		System.setProperty("webdriver.chrome.driver", "D:\\IT Course\\chrome driver\\chromedriver.exe");
 		wd = new ChromeDriver();
-		wd.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		//wd.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		
+		wait = new WebDriverWait(wd, 10);
 
 	}
 	
@@ -40,8 +45,11 @@ public class FastestWebsite {
 	wd.get("https://robinjescott.com/about/");	
 	WebElement element = wd.findElement(By.id("menu-item-166"));
 	element.click();
+	
 	WebElement element2 = wd.findElement(By.xpath("//a[text()='relevant page']"));
-	element2.click();	
+	wait.until(ExpectedConditions.visibilityOf(element2));
+	element2.click();
+	
 	
 	wd.navigate().refresh();
 	wd.navigate().back();
@@ -50,7 +58,7 @@ public class FastestWebsite {
 	@AfterMethod
 
 	private void quit() {
-		wd.quit();	
+	 wd.quit();	
 		
 		
 		
