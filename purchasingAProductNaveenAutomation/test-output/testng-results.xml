@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2022-06-11T18:13:02Z" name="Default suite" finished-at="2022-06-11T18:13:12Z" duration-ms="10306">
+    <groups>
+    </groups>
+    <test started-at="2022-06-11T18:13:02Z" name="Default test" finished-at="2022-06-11T18:13:12Z" duration-ms="10306">
+      <class name="NaveenAutomation.purchasingAProduct.productPurchaseTesting">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:NaveenAutomation.purchasingAProduct.productPurchaseTesting@14f9390f]" started-at="2022-06-11T18:13:02Z" name="setUp" finished-at="2022-06-11T18:13:06Z" duration-ms="4453" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="buyingAnItem()[pri:0, instance:NaveenAutomation.purchasingAProduct.productPurchaseTesting@14f9390f]" started-at="2022-06-11T18:13:06Z" name="buyingAnItem" finished-at="2022-06-11T18:13:12Z" duration-ms="5831" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- buyingAnItem -->
+      </class> <!-- NaveenAutomation.purchasingAProduct.productPurchaseTesting -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
